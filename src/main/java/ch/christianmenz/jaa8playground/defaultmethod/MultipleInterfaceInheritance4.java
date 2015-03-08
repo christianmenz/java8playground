@@ -9,7 +9,7 @@ package ch.christianmenz.jaa8playground.defaultmethod;
  *
  * @author Christian
  */
-public class MultipleInterfaceInheritance3 {
+public class MultipleInterfaceInheritance4 {
     
     interface Interface1 {
         
@@ -29,8 +29,9 @@ public class MultipleInterfaceInheritance3 {
     
     static class Implementation1 implements Interface1, Interface2 {
         // Java also knows what to do when we explicitly implement the method        
+        // But what if I want to actually select Interface1.test()?
         public void test() {
-            System.out.println("-- impl");
+            Interface1.super.test();
         }
     }
     
